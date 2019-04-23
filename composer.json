@@ -1,4 +1,14 @@
 {
     "name": "free-donut/hexlet",
+    "description": "example package",
+    "authors": [
+        {
+            "name": "free-donut",
+            "email": "yula@freedonut.space"
+        }
+    ],
+    "bin": [
+        "./brain-games"
+    ],
     "require": {}
 }

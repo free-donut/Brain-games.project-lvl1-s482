@@ -1,6 +1,7 @@
 {
     "name": "free-donut/hexlet",
     "description": "example package",
+    "license": "MIT",
     "authors": [
         {
             "name": "free-donut",
@@ -8,7 +9,7 @@
         }
     ],
     "bin": [
-        "./brain-games"
+        "/brain-games"
     ],
     "require": {}
 }

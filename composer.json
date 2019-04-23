@@ -11,5 +11,10 @@
     "bin": [
         "/brain-games"
     ],
-    "require": {}
+    "require": {},
+    "autoload": {
+        "files": [
+            "bin/brain-games"
+        ]
+    }
 }

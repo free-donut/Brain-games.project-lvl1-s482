@@ -9,12 +9,7 @@
         }
     ],
     "bin": [
-        "/brain-games"
+        "bin/brain-games"
     ],
-    "require": {},
-    "autoload": {
-        "files": [
-            "bin/brain-games"
-        ]
-    }
+    "require": {}
 }

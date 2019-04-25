@@ -2,3 +2,5 @@
 <?php
 
 print_r("Welcome to the Brain Games!\n");
+
+BrainGames\Cli\run();

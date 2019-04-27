@@ -1,7 +1,7 @@
 {
     "name": "free-donut/hexlet",
     "description": "example package",
-    "license": "freedonut",
+    "license": "MIT",
     "authors": [
         {
             "name": "free-donut",

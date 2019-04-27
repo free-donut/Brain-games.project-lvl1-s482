@@ -21,7 +21,7 @@ function ifEven($number)
 
 function questionEven($name)
 {
-    for ($correctAnsweerCount = 0; $correctAnsweerCount < 3; $correctAnsweerCount++) {
+    for ($correctAnswerCount = 0; $correctAnswerCount < 3; $correctAnswerCount++) {
         $num = rand(1, 100);
         line('Question: %s', $num);
         $answer = \cli\prompt('Your answer');
@@ -35,7 +35,7 @@ function questionEven($name)
             break;
         }
     }
-    if ($correctAnsweerCount == 3) {
+    if ($correctAnswerCount == 3) {
         line('Congratulations, %s', $name);
     }
 }

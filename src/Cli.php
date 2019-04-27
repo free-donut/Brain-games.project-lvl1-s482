@@ -21,11 +21,11 @@ function ifEven($number)
 
 function questionEven($name)
 {
-    for ($i = 0; $i < 3; $i++) { 
+    for ($i = 0; $i < 3; $i++) {
         $num = rand(1, 100);
         line('Question: %s', $num);
         $answer = \cli\prompt('Your answer');
-        $correectAnswer = ifEven ($num);
+        $correectAnswer = ifEven($num);
         if ($answer == $correectAnswer) {
             line('Correct!');
         } else {

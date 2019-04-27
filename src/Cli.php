@@ -11,7 +11,6 @@ function run()
     line("Hello, %s!", $name);
 }
 
-
 function ifEven($number)
 {
     if ($number % 2 === 0) {

@@ -9,4 +9,36 @@ if (file_exists($autoloadPath1)) {
 }
 
 $rules = 'What is the result of the expression?';
-BrainGames\Soft\run($rules);
+
+$dataFunc = function(){
+  $arr = ['-', '+', '*'];
+  $oper = rand(0,2);
+  $res = [];
+  $res [] = rand(1, 10);
+  $res [] = $arr[$oper];
+  $res []= rand(1, 10);
+  return $res;
+};
+
+$questionFunc = function($data) {
+  return implode('' , $data);
+};
+
+$correctAnswerFunc = function($data) {
+  $x = $data[0];
+  $oper = $data[1];
+  $y = $data[2];
+  switch ($oper) {
+      case '+':
+          return $x + $y;
+          break;
+      case '-':
+          return $x - $y;
+          break;
+      case '*':
+          return $x * $y;
+          break;
+  }
+};
+
+BrainGames\Soft\run($rules, $dataFunc, $questionFunc, $correctAnswerFunc);

@@ -5,7 +5,7 @@ namespace BrainGames\Soft;
 use function \cli\line;
 
 //приветсивие, узнать имя
-function run($rules)
+function run($rules, $dataFunc, $questionFunc, $correctAnswerFunc)
 {
 	//приветствие
 	line('Welcome to the Brain Game!');
@@ -14,24 +14,18 @@ function run($rules)
     //узнать имя
     $name = \cli\prompt('May I have your name?');
     line("Hello, %s!", $name);
-    /*
-    questionEven($name);
-    */
-    
-}
-
-/*
-//вопросы
-function questions($name, $question, $correectAnswer)
-{
+	//вопросы
     for ($correctAnswerCount = 0; $correctAnswerCount < 3; $correctAnswerCount++) {
-        line('Question: %s', $question);
+    	$data = $dataFunc();
+		$question = $questionFunc($data);
+		$correctAnswer = $correctAnswerFunc($data);
+    	line('Question: %s', $question);
         $answer = \cli\prompt('Your answer');
-        if ($answer == $correectAnswer) {
+        if ($answer == $correctAnswer) {
             line('Correct!');
         } else {
             line('\'%s\' is wrong answer ;(.', $answer);
-            line('Correct answer was \'%s\'', $correectAnswer);
+            line('Correct answer was \'%s\'', $correctAnswer);
             line("Let's try again, %s", $name);
             break;
         }
@@ -54,4 +48,3 @@ function correectAnswer($question, $func)
 	return $func($question);
 
 }
-*/

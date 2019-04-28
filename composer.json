@@ -10,7 +10,8 @@
     ],
     "bin": [
         "bin/brain-games",
-        "bin/brain-even"
+        "bin/brain-even",
+        "bin/brain-calc"
     ],
     "require": {
         "wp-cli/php-cli-tools": "^0.11.11"
@@ -20,7 +21,8 @@
     },
     "autoload": {
         "files": [
-            "src/Cli.php"
+            "src/Cli.php",
+            "src/Soft.php"
         ],
         "psr-4": {
             "Brain\\Games\\": "src"

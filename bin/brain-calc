@@ -8,4 +8,5 @@ if (file_exists($autoloadPath1)) {
     require_once $autoloadPath2;
 }
 
-BrainGames\Soft\run('What is the result of the expression?');
+$rules = 'What is the result of the expression?';
+BrainGames\Soft\run($rules);

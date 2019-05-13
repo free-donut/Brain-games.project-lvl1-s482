@@ -9,4 +9,24 @@ if (file_exists($autoloadPath1)) {
     require_once $autoloadPath2;
 }
 
-BrainGames\Cli\runEven();
+//BrainGames\Cli\runEven();
+
+$rules = 'Answer "yes" if number even otherwise answer "no".';
+
+$dataFunc = function(){
+  $res = rand(1, 100);
+  return $res;
+};
+
+$questionFunc = function($data) {
+  return $data;
+};
+
+$correctAnswerFunc = function($data) {
+  if ($data % 2 === 0) {
+    return 'yes';
+  }
+    return 'no';
+};
+
+BrainGames\Soft\run($rules, $dataFunc, $questionFunc, $correctAnswerFunc);

@@ -47,3 +47,4 @@ function correectAnswer($question, $func)
 {
     return $func($question);
 }
+*/

@@ -34,7 +34,7 @@ function run($rules, $dataFunc, $questionFunc, $correctAnswerFunc)
         line('Congratulations, %s', $name);
     }
 }
-
+/*
 //вопрос
 function question($func)
 {

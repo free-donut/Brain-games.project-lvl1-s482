@@ -7,19 +7,19 @@ use function \cli\line;
 //приветсивие, узнать имя
 function run($rules, $dataFunc, $questionFunc, $correctAnswerFunc)
 {
-	//приветствие
-	line('Welcome to the Brain Game!');
-	//правила
+//приветствие
+    line('Welcome to the Brain Game!');
+//правила
     line($rules);
     //узнать имя
     $name = \cli\prompt('May I have your name?');
     line("Hello, %s!", $name);
-	//вопросы
+//вопросы
     for ($correctAnswerCount = 0; $correctAnswerCount < 3; $correctAnswerCount++) {
-    	$data = $dataFunc();
-		$question = $questionFunc($data);
-		$correctAnswer = $correctAnswerFunc($data);
-    	line('Question: %s', $question);
+        $data = $dataFunc();
+        $question = $questionFunc($data);
+        $correctAnswer = $correctAnswerFunc($data);
+        line('Question: %s', $question);
         $answer = \cli\prompt('Your answer');
         if ($answer == $correctAnswer) {
             line('Correct!');
@@ -34,17 +34,16 @@ function run($rules, $dataFunc, $questionFunc, $correctAnswerFunc)
         line('Congratulations, %s', $name);
     }
 }
+
 /*
 //вопрос
 function question($func)
 {
-	return $func;
-
+    return $func;
 }
 
 //правильный ответ
 function correectAnswer($question, $func)
 {
-	return $func($question);
-
+    return $func($question);
 }

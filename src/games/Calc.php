@@ -3,7 +3,8 @@ namespace BrainGames\Games\Calc;
 
 use function BrainGames\Soft\run as run_calc;
 
-function runGame(){
+function runGame()
+{
     $rules = 'What is the result of the expression?';
 
     $dataFunc = function () {

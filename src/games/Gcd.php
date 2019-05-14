@@ -8,7 +8,7 @@ function maxDivisor($x, $y)
     if ($x === $y) {
         return $x;
     } else {
-        for ($i = max($x, $y); $i > 0 ; $i--) {
+        for ($i = max($x, $y); $i > 0; $i--) {
             if ($y % $i === 0 && $x % $i === 0) {
                 return $i;
             }

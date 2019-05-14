@@ -9,8 +9,8 @@
         }
     ],
     "bin": [
-        "bin/games/brain-games",
-        "bin/games/brain-even",
+        "bin/brain-games",
+        "bin/brain-even",
         "bin/brain-calc"
     ],
     "require": {

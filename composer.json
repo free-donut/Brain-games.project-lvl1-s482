@@ -11,6 +11,7 @@
     "bin": [
         "bin/brain-games",
         "bin/brain-even",
+        "bin/brain-eventest",
         "bin/brain-calc"
     ],
     "require": {
@@ -22,7 +23,8 @@
     "autoload": {
         "files": [
             "src/Cli.php",
-            "src/Soft.php"
+            "src/Soft.php",
+            "src/games/Even.php"
         ],
         "psr-4": {
             "Brain\\Games\\": "src"

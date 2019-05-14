@@ -1,6 +1,8 @@
 <?php
 namespace BrainGames\Games\Even;
+
 use function BrainGames\Soft\run as run_even;
+
 function runGame(){
     $rules = 'Answer "yes" if number even otherwise answer "no".';
 

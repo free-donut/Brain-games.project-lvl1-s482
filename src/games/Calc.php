@@ -6,21 +6,21 @@ use function BrainGames\Soft\run as run_calc;
 function runGame(){
     $rules = 'What is the result of the expression?';
 
-    $dataFunc = function(){
+    $dataFunc = function () {
         $arr = ['-', '+', '*'];
-        $oper = rand(0,2);
+        $oper = rand(0, 2);
         $res = [];
         $res [] = rand(1, 10);
         $res [] = $arr[$oper];
-        $res []= rand(1, 10);
-    return $res;
+        $res [] = rand(1, 10);
+        return $res;
     };
 
-    $questionFunc = function($data) {
-       return implode('' , $data);
+    $questionFunc = function ($data) {
+        return implode('', $data);
     };
 
-    $correctAnswerFunc = function($data) {
+    $correctAnswerFunc = function ($data) {
         $x = $data[0];
         $oper = $data[1];
         $y = $data[2];

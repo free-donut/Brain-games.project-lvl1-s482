@@ -6,16 +6,16 @@ use function BrainGames\Soft\run as run_even;
 function runGame(){
     $rules = 'Answer "yes" if number even otherwise answer "no".';
 
-    $dataFunc = function(){
+    $dataFunc = function () {
         $res = rand(1, 100);
         return $res;
     };
 
-    $questionFunc = function($data) {
+    $questionFunc = function ($data) {
         return $data;
     };
 
-    $correctAnswerFunc = function($data) {
+    $correctAnswerFunc = function ($data) {
         if ($data % 2 === 0) {
             return 'yes';
         }

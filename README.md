@@ -8,3 +8,5 @@
 [![Build Status](https://travis-ci.org/free-donut/project-lvl1-s482.svg?branch=master)](https://travis-ci.org/free-donut/project-lvl1-s482)
 
 [![asciicast](https://asciinema.org/a/hKEJKRTRLfcVtewIWSUDIdm7B.svg)](https://asciinema.org/a/hKEJKRTRLfcVtewIWSUDIdm7B)
+
+[![asciicast](https://asciinema.org/a/pKFgZ18WjSu4EpfVxmYW8fjYf.svg)](https://asciinema.org/a/pKFgZ18WjSu4EpfVxmYW8fjYf)

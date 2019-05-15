@@ -1,27 +1,25 @@
 <?php
 namespace BrainGames\Games\Even;
 
-use function BrainGames\Soft\run as run_even;
+use function BrainGames\Engine\run as run_even;
+
+const RULES = 'Answer "yes" if number even otherwise answer "no".';
+
+function ifEven($number) 
+{
+    return $number % 2 === 0;
+}
 
 function runGame()
 {
-    $rules = 'Answer "yes" if number even otherwise answer "no".';
-
-    $dataFunc = function () {
-        $res = rand(1, 100);
-        return $res;
-    };
-
-    $questionFunc = function ($data) {
-        return $data;
-    };
-
-    $correctAnswerFunc = function ($data) {
-        if ($data % 2 === 0) {
-            return 'yes';
+    $getData = function () {
+        $question = rand(1, 100);
+        if (ifEven($question)) {
+            $correctAnswer = 'yes';
+        }else {
+            $correctAnswer = 'no';
         }
-        return 'no';
+        return ['question' => $question, 'correctAnswer' =>  $correctAnswer];
     };
-
-    run_even($rules, $dataFunc, $questionFunc, $correctAnswerFunc);
+    run_even(RULES, $getData);
 }

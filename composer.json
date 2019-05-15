@@ -13,7 +13,8 @@
         "bin/brain-even",
         "bin/brain-calc",
         "bin/brain-gcd",
-        "bin/brain-progression"
+        "bin/brain-progression",
+        "bin/brain-prime"
     ],
     "require": {
         "wp-cli/php-cli-tools": "^0.11.11"
@@ -24,12 +25,12 @@
     "autoload": {
         "files": [
             "src/Cli.php",
-            "src/Soft.php",
             "src/Engine.php",
             "src/games/Even.php",
             "src/games/Calc.php",
             "src/games/Gcd.php",
-            "src/games/Progression.php"
+            "src/games/Progression.php",
+            "src/games/Prime.php"
         ],
         "psr-4": {
             "Brain\\Games\\": "src"

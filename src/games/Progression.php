@@ -5,19 +5,19 @@ use function BrainGames\Engine\run as run_progression;
 
 const RULES = 'What number is missing in the progression?';
 
-function progression() 
+function progression ()
 {
-  $arr = [];
-  $step = rand(1, 10);
-  $first = rand(1, 10);
-  $arr [] = $first;
-  for($i = 0; $i < 9; $i++) {
-    $arr[] = $arr[$i] + $step;
+    $arr = [];
+    $step = rand(1, 10);
+    $first = rand(1, 10);
+    $arr [] = $first;
+    for($i = 0; $i < 9; $i++) {
+        $arr[] = $arr[$i] + $step;
   }
-  return $arr;
+    return $arr;
 }
 
-function runGame () 
+function runGame ()
 {
     $getData = function () {
         $progression = progression();

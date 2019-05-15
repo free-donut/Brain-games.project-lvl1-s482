@@ -5,7 +5,7 @@ use function BrainGames\Engine\run as run_even;
 
 const RULES = 'Answer "yes" if number even otherwise answer "no".';
 
-function ifEven($number) 
+function ifEven($number)
 {
     return $number % 2 === 0;
 }

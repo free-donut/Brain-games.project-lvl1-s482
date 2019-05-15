@@ -5,7 +5,7 @@ use function BrainGames\Engine\run as run_calc;
 
 const RULES = 'What is the result of the expression?';
 
-function getExpression () 
+function getExpression()
 {
         $arr = ['-', '+', '*'];
         $oper = rand(0, 2);
@@ -16,25 +16,25 @@ function getExpression ()
         return $res;
 }
 
-function resultExpression ($expression)
+function resultExpression($expression)
 {
-        $x = $expression[0];
-        $oper = $expression[1];
-        $y = $expression[2];
-        switch ($oper) {
-            case '+':
-                return $x + $y;
-                break;
-            case '-':
-                return $x - $y;
-                break;
-            case '*':
-                return $x * $y;
-                break;
-        }
-};
+    $x = $expression[0];
+    $oper = $expression[1];
+    $y = $expression[2];
+    switch ($oper) {
+        case '+':
+            return $x + $y;
+            break;
+        case '-':
+            return $x - $y;
+            break;
+        case '*':
+            return $x * $y;
+            break;
+    }
+}
 
-function runGame ()
+function runGame()
 {
     $getData = function () {
         $expression = getExpression();

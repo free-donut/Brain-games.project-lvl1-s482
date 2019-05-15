@@ -16,7 +16,7 @@ function runGame()
         $question = rand(1, 100);
         if (ifEven($question)) {
             $correctAnswer = 'yes';
-        }else {
+        } else {
             $correctAnswer = 'no';
         }
         return ['question' => $question, 'correctAnswer' =>  $correctAnswer];

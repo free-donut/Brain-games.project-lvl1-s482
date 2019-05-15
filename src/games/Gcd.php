@@ -1,10 +1,14 @@
 <?php
 namespace BrainGames\Games\Gcd;
 
-use function BrainGames\Soft\run as run_gcd;
+use function BrainGames\Engine\run as run_gcd;
 
-function maxDivisor($x, $y)
+const RULES = 'Find the greatest common divisor of given numbers.';
+
+function maxDivisor($numbers)
 {
+    $x = $numbers[0];
+    $y = $numbers[1];
     if ($x === $y) {
         return $x;
     } else {
@@ -15,27 +19,21 @@ function maxDivisor($x, $y)
         }
     }
 }
-function runGame()
-{
-    $rules = 'Find the greatest common divisor of given numbers.';
 
-    $dataFunc = function () {
+function getNumbers() {
         $res = [];
         $res [] = rand(1, 100);
         $res [] = rand(1, 100);
         return $res;
-    };
+}
 
-    $questionFunc = function ($data) {
-        $res = implode(' ', $data);
-        return $res;
+function runGame()
+{
+    $getData = function () {
+    	$numbers = getNumbers();
+        $question = implode(' ', $numbers);
+        $correctAnswer = maxDivisor($numbers);
+        return ['question' => $question, 'correctAnswer' =>  $correctAnswer];
     };
-
-    $correctAnswerFunc = function ($data) {
-        $x = $data[0];
-        $y = $data[1];
-        return maxDivisor($x, $y);
-    };
-
-    run_gcd($rules, $dataFunc, $questionFunc, $correctAnswerFunc);
+    run_gcd(RULES, $getData);
 }

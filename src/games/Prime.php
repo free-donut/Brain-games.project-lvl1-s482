@@ -5,14 +5,14 @@ use function BrainGames\Engine\run as run_prime;
 
 const RULES = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
-function ifPrime($number, $x = 2)
+function ifPrime($number, $divisor = 2)
 {
-    if ($x > $number / 2) {
+    if ($divisor > $number / 2) {
         return true;
-    } if ($number % $x === 0) {
+    } if ($number % $divisor === 0) {
         return false;
     } else {
-        return ifPrime($number, $x + 1);
+        return ifPrime($number, $divisor + 1);
     }
 }
 

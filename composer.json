@@ -1,13 +1,5 @@
 {
     "name": "free-donut/hexlet",
-    "description": "example package",
-    "license": "MIT",
-    "authors": [
-        {
-            "name": "free-donut",
-            "email": "yula@freedonut.space"
-        }
-    ],
     "bin": [
         "bin/brain-games",
         "bin/brain-even",
@@ -15,6 +7,16 @@
         "bin/brain-gcd",
         "bin/brain-progression",
         "bin/brain-prime"
+    ],
+    "description": "my first project",
+    "type": "project",
+    "keywords": ["cli", "games"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "free-donut",
+            "email": "yula@freedonut.space"
+        }
     ],
     "require": {
         "wp-cli/php-cli-tools": "^0.11.11"

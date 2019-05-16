@@ -3,6 +3,8 @@ namespace BrainGames\Engine;
 
 use function \cli\line;
 
+const RIGHT_ANSWERS_FOR_WINNING = 3;
+
 //приветсивие, узнать имя
 function run($rules, $getData)
 {
@@ -10,14 +12,14 @@ function run($rules, $getData)
     line('Welcome to the Brain Game!');
 //правила
     line($rules);
-    //узнать имя
+//узнать имя
     $name = \cli\prompt('May I have your name?');
     line("Hello, %s!", $name);
 //вопросы
-    for ($correctAnswerCount = 0; $correctAnswerCount < 3; $correctAnswerCount++) {
-        $data = $getData();
-        $question = $data['question'];
-        $correctAnswer = $data['correctAnswer'];
+    for ($rightAnswerCount = 0; $rightAnswerCount < RIGHT_ANSWERS_FOR_WINNING; $rightAnswerCount++) {
+        $gameData = $getData();
+        $question = $gameData['question'];
+        $correctAnswer = $gameData['correctAnswer'];
         line('Question: %s', $question);
         $answer = \cli\prompt('Your answer');
         if ($answer == $correctAnswer) {
@@ -29,7 +31,7 @@ function run($rules, $getData)
             break;
         }
     }
-    if ($correctAnswerCount == 3) {
+    if ($rightAnswerCount == RIGHT_ANSWERS_FOR_WINNING) {
         line('Congratulations, %s', $name);
     }
 }

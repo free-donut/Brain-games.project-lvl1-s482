@@ -4,7 +4,7 @@ namespace BrainGames\Games\Gcd;
 use function BrainGames\Engine\run as run_gcd;
 
 const RULES = 'Find the greatest common divisor of given numbers.';
-const MINNUMBER
+
 function maxDivisor($numbers)
 {
     $firstNumber = $numbers[0];

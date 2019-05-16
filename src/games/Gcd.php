@@ -31,8 +31,8 @@ function runGame()
 {
     $getData = function () {
         $numbers = getNumbers();
-        $question = implode(' ', $numbers);
         $correctAnswer = maxDivisor($numbers);
+        $question = implode(' ', $numbers);
         return ['question' => $question, 'correctAnswer' =>  $correctAnswer];
     };
     run_gcd(RULES, $getData);

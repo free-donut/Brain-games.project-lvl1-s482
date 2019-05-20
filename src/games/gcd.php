@@ -1,11 +1,11 @@
 <?php
 namespace BrainGames\Games\Gcd;
 
-use function BrainGames\Engine\run as run_gcd;
+use function BrainGames\Engine\run as runGcd;
 
-const RULES = 'Find the greatest common divisor of given numbers.';
+const DESCRIPTION = 'Find the greatest common divisor of given numbers.';
 
-function maxDivisor($numbers)
+function findMaxDivisor($numbers)
 {
     $firstNumber = $numbers[0];
     $secondNumber = $numbers[1];
@@ -31,9 +31,9 @@ function runGame()
 {
     $getData = function () {
         $numbers = getNumbers();
-        $correctAnswer = maxDivisor($numbers);
+        $correctAnswer = findMaxDivisor($numbers);
         $question = implode(' ', $numbers);
-        return ['question' => $question, 'correctAnswer' =>  $correctAnswer];
+        return [$question, $correctAnswer];
     };
-    run_gcd(RULES, $getData);
+    runGcd(DESCRIPTION, $getData);
 }

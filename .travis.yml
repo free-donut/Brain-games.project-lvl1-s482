@@ -1,6 +1,6 @@
 anguage: php
 php:
-  - '7.2.15-1+0~20190209065123.16+stretch~1.gbp3ad8c0'
+  - 7.2.15-1+0~20190209065123.16+stretch~1.gbp3ad8c0
 
 install:
   - make install

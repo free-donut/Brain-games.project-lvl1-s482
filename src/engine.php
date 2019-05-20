@@ -15,7 +15,7 @@ function run($rules, $getData)
     line("Hello, %s!", $name);
     for ($i = 0; $i < RIGHT_ANSWERS_COUNT; $i++) {
         $gameData = $getData();
-        [$question, $correctAnswer]= $gameData;
+        [$question, $correctAnswer] = $gameData;
         line('Question: %s', $question);
         $answer = cliPromt('Your answer');
         if ($answer == $correctAnswer) {

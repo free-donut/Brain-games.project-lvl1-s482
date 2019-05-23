@@ -24,9 +24,9 @@ function getResultExpression($firstNumber, $operand, $secondNumber)
 function calcGame()
 {
     $getData = function () {
-    	$firstNumber = rand(1, 10);
+        $firstNumber = rand(1, 10);
         $secondNumber = rand(1, 10);
-    	$operandIndex = rand(0, count(OPERANDS) - 1);
+        $operandIndex = rand(0, count(OPERANDS) - 1);
         $operand = OPERANDS[$operandIndex];
         $question = "$firstNumber $operand $secondNumber";
         $correctAnswer = getResultExpression($firstNumber, $operand, $secondNumber);

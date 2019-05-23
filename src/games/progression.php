@@ -18,7 +18,7 @@ function progressionGame()
 {
     $getData = function () {
         $progressionStart = rand(1, 10);
-        $progressionDiff = rand(1, 10);    
+        $progressionDiff = rand(1, 10);
         $progression = getProgression(PROGRESSION_LENGTH, $progressionStart, $progressionDiff);
         $hiddenElementIndex = rand(0, PROGRESSION_LENGTH - 1);
         $correctAnswer = $progression[$hiddenElementIndex];

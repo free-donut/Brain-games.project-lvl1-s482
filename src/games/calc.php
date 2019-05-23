@@ -1,21 +1,10 @@
 <?php
 namespace BrainGames\Games\Calc;
 
-use function BrainGames\Engine\run as runCalc;
+use function BrainGames\Engine\run;
 
 const DESCRIPTION = 'What is the result of the expression?';
-
-function getExpression()
-{
-        $operands = ['-', '+', '*'];
-        $arrayLength = count($operands);
-        $operand = rand(0, $arrayLength - 1);
-        $result = [];
-        $result [] = rand(1, 10);
-        $result [] = $operands[$operand];
-        $result [] = rand(1, 10);
-        return $result;
-}
+const OPERANDS = ['-', '+', '*'];
 
 function getResultExpression($firstNumber, $operand, $secondNumber)
 {
@@ -32,14 +21,16 @@ function getResultExpression($firstNumber, $operand, $secondNumber)
     }
 }
 
-function runGame()
+function calcGame()
 {
     $getData = function () {
-        $expression = getExpression();
-        $question = implode(' ', $expression);
-        [$firstNumber, $operand, $secondNumber] = $expression;
+    	$firstNumber = rand(1, 10);
+        $secondNumber = rand(1, 10);
+    	$operandIndex = rand(0, count(OPERANDS) - 1);
+        $operand = OPERANDS[$operandIndex];
+        $question = "$firstNumber $operand $secondNumber";
         $correctAnswer = getResultExpression($firstNumber, $operand, $secondNumber);
         return [$question, $correctAnswer];
     };
-    runCalc(DESCRIPTION, $getData);
+    run(DESCRIPTION, $getData);
 }

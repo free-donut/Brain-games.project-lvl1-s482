@@ -1,32 +1,30 @@
 <?php
 namespace BrainGames\Games\Prime;
 
-use function BrainGames\Engine\run as runPrime;
+use function BrainGames\Engine\run;
 
 const DESCRIPTION = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
-function isPrime($number, $divisor = 2)
+function isPrime($number)
 {
-    if ($divisor > $number / 2) {
-        return true;
-    } if ($number % $divisor === 0) {
+    if ($number < 2) {
         return false;
-    } else {
-        return isPrime($number, $divisor + 1);
     }
+    for ($i = 2; $i <= $number / 2; $i++) { 
+        if ($number % $i === 0) {
+            return false;
+        }
+    }
+    return true;
 }
 
-function runGame()
+function primeGame()
 {
     $getData = function () {
         $number = rand(2, 4000);
         $question = $number;
-        if (isPrime($number)) {
-            $correctAnswer = 'yes';
-        } else {
-            $correctAnswer = 'no';
-        }
+        $correctAnswer = (isPrime($number)) ? 'yes' : 'no';
         return [$question, $correctAnswer];
     };
-    runPrime(DESCRIPTION, $getData);
+    run(DESCRIPTION, $getData);
 }

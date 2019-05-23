@@ -1,30 +1,30 @@
 <?php
 namespace BrainGames\Games\Progression;
 
-use function BrainGames\Engine\run as runProgression;
+use function BrainGames\Engine\run;
 
 const DESCRIPTION = 'What number is missing in the progression?';
 const PROGRESSION_LENGTH = 10;
 
-function getProgression($progressionLength)
+function getProgression($progressionLength, $start, $diff)
 {
-    $diff = rand(1, 10);
-    $start = rand(1, 10);
     for ($i = 0; $i < $progressionLength; $i++) {
         $result[] = $start + $diff * $i;
     }
     return $result;
 }
 
-function runGame()
+function progressionGame()
 {
     $getData = function () {
-        $progression = getProgression(PROGRESSION_LENGTH);
+        $progressionStart = rand(1, 10);
+        $progressionDiff = rand(1, 10);    
+        $progression = getProgression(PROGRESSION_LENGTH, $progressionStart, $progressionDiff);
         $hiddenElementIndex = rand(0, PROGRESSION_LENGTH - 1);
         $correctAnswer = $progression[$hiddenElementIndex];
         $progression[$hiddenElementIndex] = '..';
         $question = implode(' ', $progression);
         return [$question, $correctAnswer];
     };
-    runProgression(DESCRIPTION, $getData);
+    run(DESCRIPTION, $getData);
 }

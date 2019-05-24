@@ -21,9 +21,8 @@ function isPrime($number)
 function primeGame()
 {
     $getData = function () {
-        $number = rand(2, 4000);
-        $question = $number;
-        $correctAnswer = (isPrime($number)) ? 'yes' : 'no';
+        $question = rand(2, 4000);
+        $correctAnswer = (isPrime($question)) ? 'yes' : 'no';
         return [$question, $correctAnswer];
     };
     run(DESCRIPTION, $getData);

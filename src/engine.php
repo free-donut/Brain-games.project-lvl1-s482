@@ -6,10 +6,10 @@ use function \cli\prompt;
 
 const RIGHT_ANSWERS_COUNT = 3;
 
-function run($rules, $getData)
+function run($description, $getData)
 {
     line('Welcome to the Brain Game!');
-    line($rules);
+    line($description);
     $name = prompt('May I have your name?');
     line("Hello, %s!", $name);
     for ($i = 0; $i < RIGHT_ANSWERS_COUNT; $i++) {

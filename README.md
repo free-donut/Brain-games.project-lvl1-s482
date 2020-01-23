@@ -2,7 +2,7 @@
 
 [![Maintainability](https://api.codeclimate.com/v1/badges/606143e3070bae2869d3/maintainability)](https://codeclimate.com/github/free-donut/project-lvl1-s482/maintainability)
 
-[![Build Status](https://travis-ci.org/free-donut/project-lvl1-s482.svg?branch=master)](https://travis-ci.org/free-donut/project-lvl1-s482)
+[![Build Status](https://travis-ci.org/free-donut/project-lvl1-s482.Brain-games.svg?branch=master)](https://travis-ci.org/free-donut/project-lvl1-s482.Brain-games)
 
 ## Description
 
